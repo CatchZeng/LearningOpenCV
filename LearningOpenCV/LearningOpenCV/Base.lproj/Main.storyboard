@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Say Hello View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SayHelloViewController" customModule="LearningOpenCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="sayHello" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-jr-sbg">
+                                <rect key="frame" x="0.5" y="100.5" width="375" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hz3-jr-sbg" secondAttribute="height" multiplier="550:309" id="ouw-9x-lWK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="sayHello" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-cN-lJf">
+                                <rect key="frame" x="0.0" y="375.5" width="375" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="p8H-cN-lJf" secondAttribute="height" multiplier="550:309" id="Kjc-L7-f4J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p8H-cN-lJf" firstAttribute="width" secondItem="Hz3-jr-sbg" secondAttribute="width" id="3bH-F4-Zmr"/>
+                            <constraint firstItem="Hz3-jr-sbg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="99a-Mi-d8V"/>
+                            <constraint firstItem="Hz3-jr-sbg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.6" id="Vlq-Us-sR4"/>
+                            <constraint firstItem="p8H-cN-lJf" firstAttribute="centerX" secondItem="Hz3-jr-sbg" secondAttribute="centerX" id="bhZ-DJ-T3C"/>
+                            <constraint firstItem="Hz3-jr-sbg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d73-Yh-B8V"/>
+                            <constraint firstItem="p8H-cN-lJf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.4" id="p4m-f8-wt0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="grayImageView" destination="p8H-cN-lJf" id="pwM-Rt-S9O"/>
+                        <outlet property="imageView" destination="Hz3-jr-sbg" id="WbE-rT-2Tv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-658" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sayHello" width="550" height="309"/>
+    </resources>
 </document>

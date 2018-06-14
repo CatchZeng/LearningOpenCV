@@ -13,4 +13,8 @@
 
 + (UIImage *)gray:(UIImage *)image;
 
++ (UIImage *)mask:(UIImage *)image;
+
++ (UIImage *)filter2D:(UIImage *)image;
+
 @end

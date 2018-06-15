@@ -17,4 +17,6 @@
 
 + (UIImage *)filter2D:(UIImage *)image;
 
++ (UIImage *)cutout:(UIImage *)image;
+
 @end

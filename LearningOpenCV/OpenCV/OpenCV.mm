@@ -66,4 +66,20 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)cutout:(UIImage *)image {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat mask = Mat::zeros(src.size(), CV_8UC1);
+    
+    Rect2i r = Rect2i(120, 80, 100, 100);
+    mask(r).setTo(255);
+    
+    Mat dst;
+    src.copyTo(dst, mask);
+    
+    UIImage* result = MatToUIImage(dst);
+    return result;
+}
+
 @end

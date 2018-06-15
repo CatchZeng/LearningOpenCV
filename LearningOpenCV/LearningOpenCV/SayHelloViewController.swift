@@ -16,6 +16,6 @@ class SayHelloViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        grayImageView.image = OpenCV.mask(#imageLiteral(resourceName: "sayHello"))
+        grayImageView.image = OpenCV.cutout(#imageLiteral(resourceName: "sayHello"))
     }
 }

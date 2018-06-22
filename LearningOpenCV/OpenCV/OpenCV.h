@@ -19,4 +19,10 @@
 
 + (UIImage *)cutout:(UIImage *)image;
 
++ (UIImage *)add:(UIImage *)image image2:(UIImage *)image2;
+
++ (UIImage *)addWeighted:(UIImage *)image image2:(UIImage *)image2 alpha:(double)alpha gamma:(double)gamma;
+
++ (UIImage *)add:(UIImage *)image on:(UIImage *)anotherImage atPosition:(CGPoint)position alpha:(CGFloat)alpha gamma:(CGFloat)gamma;
+
 @end

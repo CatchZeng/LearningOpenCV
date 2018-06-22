@@ -13,6 +13,7 @@
 		623D063820CFB900008FE5B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */; };
 		623D063B20CFB900008FE5B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D063A20CFB900008FE5B7 /* main.m */; };
 		623D064520CFB901008FE5B7 /* LearningOpenCVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D064420CFB900008FE5B7 /* LearningOpenCVTests.m */; };
+		6266752020DA48FE00ADE014 /* MixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266751F20DA48FE00ADE014 /* MixViewController.swift */; };
 		62AF7B5420CFD0F000DD8909 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AF7B5320CFD0F000DD8909 /* opencv2.framework */; };
 		62AF7B5720CFD52C00DD8909 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62AF7B5620CFD52C00DD8909 /* OpenCV.mm */; };
 		62AF7B5C20CFD6AF00DD8909 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AF7B5B20CFD6AF00DD8909 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		623D064020CFB900008FE5B7 /* LearningOpenCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningOpenCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		623D064420CFB900008FE5B7 /* LearningOpenCVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningOpenCVTests.m; sourceTree = "<group>"; };
 		623D064620CFB901008FE5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6266751F20DA48FE00ADE014 /* MixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixViewController.swift; sourceTree = "<group>"; };
 		62AF7B5320CFD0F000DD8909 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		62AF7B5520CFD52C00DD8909 /* OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCV.h; sourceTree = "<group>"; };
 		62AF7B5620CFD52C00DD8909 /* OpenCV.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCV.mm; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				623D062B20CFB8FF008FE5B7 /* AppDelegate.h */,
 				623D062C20CFB8FF008FE5B7 /* AppDelegate.m */,
 				62C1ABD020D0B29C006A8AD0 /* SayHelloViewController.swift */,
+				6266751F20DA48FE00ADE014 /* MixViewController.swift */,
 				623D063120CFB8FF008FE5B7 /* Main.storyboard */,
 				623D063420CFB900008FE5B7 /* Assets.xcassets */,
 				623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6266752020DA48FE00ADE014 /* MixViewController.swift in Sources */,
 				623D063B20CFB900008FE5B7 /* main.m in Sources */,
 				62AF7B5720CFD52C00DD8909 /* OpenCV.mm in Sources */,
 				623D062D20CFB8FF008FE5B7 /* AppDelegate.m in Sources */,

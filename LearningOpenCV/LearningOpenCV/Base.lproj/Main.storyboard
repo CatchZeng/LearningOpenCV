@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pqg-jl-Ua6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="sayHello" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-jr-sbg">
-                                <rect key="frame" x="0.5" y="100.5" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="210.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hz3-jr-sbg" secondAttribute="height" multiplier="550:309" id="ouw-9x-lWK"/>
                                 </constraints>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="sayHello" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-cN-lJf">
-                                <rect key="frame" x="0.0" y="375.5" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="367.5" width="375" height="210.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p8H-cN-lJf" secondAttribute="height" multiplier="550:309" id="Kjc-L7-f4J"/>
                                 </constraints>
@@ -51,10 +49,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="54"/>
+            <point key="canvasLocation" x="-2087" y="-43"/>
+        </scene>
+        <!--Mix View Controller-->
+        <scene sceneID="FfT-SF-TMR">
+            <objects>
+                <viewController id="Pqg-jl-Ua6" customClass="MixViewController" customModule="LearningOpenCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udi-aP-y2z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ake" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-Ks-jOz">
+                                <rect key="frame" x="19" y="107" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kJe-Ks-jOz" secondAttribute="height" multiplier="1:1" id="6yU-0i-Zmz"/>
+                                    <constraint firstAttribute="width" constant="150" id="BLf-Hu-ATn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houyi" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-HM-D6r">
+                                <rect key="frame" x="206.5" y="107" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1vN-HM-D6r" secondAttribute="height" multiplier="1:1" id="diV-yh-97f"/>
+                                    <constraint firstAttribute="width" constant="150" id="pA3-1h-eZT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8QG-Hk-3UB">
+                                <rect key="frame" x="112.5" y="268.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bnm-PD-eR2"/>
+                                    <constraint firstAttribute="width" secondItem="8QG-Hk-3UB" secondAttribute="height" multiplier="1:1" id="exk-Jk-Nkp"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uWh-JX-6nH">
+                                <rect key="frame" x="73" y="444" width="229" height="31"/>
+                                <connections>
+                                    <action selector="onSliderValueChanged:" destination="Pqg-jl-Ua6" eventType="valueChanged" id="rJ3-Ld-Qjg"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kJe-Ks-jOz" firstAttribute="centerY" secondItem="GC9-sX-spP" secondAttribute="centerY" multiplier="0.5" id="52Z-aU-MO8"/>
+                            <constraint firstItem="kJe-Ks-jOz" firstAttribute="centerX" secondItem="GC9-sX-spP" secondAttribute="centerX" multiplier="0.5" id="5g6-Kd-gAB"/>
+                            <constraint firstItem="uWh-JX-6nH" firstAttribute="width" secondItem="udi-aP-y2z" secondAttribute="width" multiplier="0.6" id="TCO-h3-18r"/>
+                            <constraint firstItem="uWh-JX-6nH" firstAttribute="top" secondItem="8QG-Hk-3UB" secondAttribute="bottom" constant="25.5" id="YUm-Zl-Xz3"/>
+                            <constraint firstItem="uWh-JX-6nH" firstAttribute="centerX" secondItem="GC9-sX-spP" secondAttribute="centerX" id="fU8-D6-uz7"/>
+                            <constraint firstItem="1vN-HM-D6r" firstAttribute="centerY" secondItem="GC9-sX-spP" secondAttribute="centerY" multiplier="0.5" id="mAh-vZ-VbC"/>
+                            <constraint firstItem="1vN-HM-D6r" firstAttribute="centerX" secondItem="GC9-sX-spP" secondAttribute="centerX" multiplier="1.5" id="or3-Kp-NoE"/>
+                            <constraint firstItem="8QG-Hk-3UB" firstAttribute="centerX" secondItem="GC9-sX-spP" secondAttribute="centerX" id="sEl-UO-FGs"/>
+                            <constraint firstItem="8QG-Hk-3UB" firstAttribute="centerY" secondItem="GC9-sX-spP" secondAttribute="centerY" id="vga-Js-IYk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GC9-sX-spP"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="8QG-Hk-3UB" id="MlA-iL-QgQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hn3-gn-fQx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-924" y="-22.03898050974513"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ake" width="100" height="100"/>
+        <image name="houyi" width="100" height="100"/>
         <image name="sayHello" width="550" height="309"/>
     </resources>
 </document>

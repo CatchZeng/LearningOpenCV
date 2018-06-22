@@ -82,4 +82,52 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)add:(UIImage *)image image2:(UIImage *)image2 {
+    Mat src;
+    Mat src2;
+    UIImageToMat(image, src);
+    UIImageToMat(image2, src2);
+    
+    Mat dst;
+    dst = src + src2;
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)addWeighted:(UIImage *)image image2:(UIImage *)image2 alpha:(double)alpha gamma:(double)gamma {
+    Mat src;
+    Mat src2;
+    UIImageToMat(image, src);
+    UIImageToMat(image2, src2);
+    
+    Mat dst;
+    addWeighted(src, alpha, src2, gamma, 0, dst);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)add:(UIImage *)image on:(UIImage *)anotherImage atPosition:(CGPoint)position alpha:(CGFloat)alpha gamma:(CGFloat)gamma {
+    Mat src;
+    Mat dst;
+    UIImageToMat(anotherImage, src);
+    UIImageToMat(image, dst);
+    
+    //ROI
+    short x = position.x;
+    short y = position.y;
+    Mat imageRoi;
+    imageRoi = src(cv::Rect(x, y, dst.cols, dst.rows));
+    
+    //add image
+    addWeighted(imageRoi, alpha, dst, (1- alpha), gamma, imageRoi);
+    
+    UIImage* result = MatToUIImage(src);
+    
+    return result;
+}
+
 @end

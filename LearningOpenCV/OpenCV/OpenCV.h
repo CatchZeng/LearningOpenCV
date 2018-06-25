@@ -23,6 +23,12 @@
 
 + (UIImage *)addWeighted:(UIImage *)image image2:(UIImage *)image2 alpha:(double)alpha gamma:(double)gamma;
 
-+ (UIImage *)add:(UIImage *)image on:(UIImage *)anotherImage atPosition:(CGPoint)position alpha:(CGFloat)alpha gamma:(CGFloat)gamma;
++ (UIImage *)add:(UIImage *)image
+      alphaExist:(BOOL)alphaExist
+              on:(UIImage *)anotherImage
+      atPosition:(CGPoint)position
+           alpha:(CGFloat)alpha
+            beta:(CGFloat)beta
+           gamma:(CGFloat)gamma;
 
 @end

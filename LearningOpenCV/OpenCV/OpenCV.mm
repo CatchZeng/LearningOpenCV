@@ -110,11 +110,11 @@ using namespace cv;
     return result;
 }
 
-+ (UIImage *)add:(UIImage *)image on:(UIImage *)anotherImage atPosition:(CGPoint)position alpha:(CGFloat)alpha gamma:(CGFloat)gamma {
++ (UIImage *)add:(UIImage *)image alphaExist:(BOOL)alphaExist on:(UIImage *)anotherImage atPosition:(CGPoint)position alpha:(CGFloat)alpha beta:(CGFloat)beta gamma:(CGFloat)gamma {
     Mat src;
     Mat dst;
     UIImageToMat(anotherImage, src);
-    UIImageToMat(image, dst);
+    UIImageToMat(image, dst, alphaExist);
     
     //ROI
     short x = position.x;
@@ -123,7 +123,7 @@ using namespace cv;
     imageRoi = src(cv::Rect(x, y, dst.cols, dst.rows));
     
     //add image
-    addWeighted(imageRoi, alpha, dst, (1- alpha), gamma, imageRoi);
+    addWeighted(imageRoi, alpha, dst, beta, gamma, imageRoi);
     
     UIImage* result = MatToUIImage(src);
     

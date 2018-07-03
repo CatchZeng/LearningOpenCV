@@ -130,4 +130,36 @@ using namespace cv;
     return result;
 }
 
++(UIImage *)transform:(UIImage *)image alpha:(double)alpha beta:(double)beta {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst = Mat(src.size(), src.type());
+    
+    int rows = src.rows;
+    int cols = src.cols;
+    Mat m;
+    src.convertTo(m, CV_32F);
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            if(src.channels() == 1) {//单通道
+                float v = m.at<Vec3f>(row, col)[0];
+                dst.at<uchar>(row, col) = saturate_cast<uchar>(v*alpha + beta);
+            } else if (src.channels() == 3) { //3通道
+                for (int i=0; i< src.channels(); i++) {
+                    float v = m.at<Vec3f>(row, col)[i];
+                    dst.at<Vec3b>(row, col)[i] = saturate_cast<uchar>(v*alpha + beta);
+                }
+            }  else if (src.channels() == 4) { //4通道
+                for (int i=0; i< src.channels(); i++) {
+                    float v = m.at<Vec4f>(row, col)[i];
+                    dst.at<Vec4b>(row, col)[i] = saturate_cast<uchar>(v*alpha + beta);
+                }
+            }
+        }
+    }
+    UIImage* result = MatToUIImage(dst);
+    return result;
+}
+
 @end

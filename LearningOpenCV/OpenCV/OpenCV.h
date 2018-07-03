@@ -31,4 +31,6 @@
             beta:(CGFloat)beta
            gamma:(CGFloat)gamma;
 
++(UIImage *)transform:(UIImage *)image alpha:(double)alpha beta:(double)beta;
+
 @end

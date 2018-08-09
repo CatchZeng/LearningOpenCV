@@ -162,4 +162,28 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)blur:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    blur(src, dst, cv::Size(sizeX, sizeY));
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)gaussianblur:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    GaussianBlur(src, dst, cv::Size(sizeX, sizeY), 11);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
 @end

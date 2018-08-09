@@ -31,6 +31,10 @@
             beta:(CGFloat)beta
            gamma:(CGFloat)gamma;
 
-+(UIImage *)transform:(UIImage *)image alpha:(double)alpha beta:(double)beta;
++ (UIImage *)transform:(UIImage *)image alpha:(double)alpha beta:(double)beta;
+
++ (UIImage *)blur:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
++ (UIImage *)gaussianblur:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
 
 @end

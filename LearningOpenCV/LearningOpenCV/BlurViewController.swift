@@ -10,26 +10,41 @@ import UIKit
 
 class BlurViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var resultImageView: UIImageView!
+    
+    private let isGaussian = true
+    
+    private var sizeX: Int32 = 3
+    private var sizeY: Int32 = 3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSliderValueChanged(_ sender: UISlider) {
+        sizeX = Int32(sender.value)
+        transform()
     }
-    */
-
+    
+    @IBAction func onSlider2ValueChanged(_ sender: UISlider) {
+        sizeY = Int32(sender.value)
+        transform()
+    }
+    
+    private func transform() {
+        if isGaussian {
+            if sizeX%2 == 0 {
+                sizeX = sizeX + 1
+            }
+            if sizeY%2 == 0 {
+                sizeY = sizeY + 1
+            }
+            let image = OpenCV.gaussianblur(imageView.image, sizeX: sizeX, sizeY: sizeY)
+            resultImageView.image = image
+        } else {
+            let image = OpenCV.blur(imageView.image, sizeX: sizeX, sizeY: sizeY)
+            resultImageView.image = image
+        }
+    }
 }

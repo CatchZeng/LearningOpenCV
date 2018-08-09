@@ -22,6 +22,7 @@
 		62AF7B5E20CFD6B800DD8909 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AF7B5D20CFD6B800DD8909 /* UIKit.framework */; };
 		62C1ABC820D0AC10006A8AD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C1ABC720D0AC10006A8AD0 /* Foundation.framework */; };
 		62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C1ABD020D0B29C006A8AD0 /* SayHelloViewController.swift */; };
+		62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF3AC9211AD5720001587A /* BlurViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		62C1ABCD20D0AD7D006A8AD0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62C1ABCF20D0B29C006A8AD0 /* LearningOpenCV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningOpenCV-Bridging-Header.h"; sourceTree = "<group>"; };
 		62C1ABD020D0B29C006A8AD0 /* SayHelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayHelloViewController.swift; sourceTree = "<group>"; };
+		62DF3AC9211AD5720001587A /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				6266751F20DA48FE00ADE014 /* MixViewController.swift */,
 				629FCC4A20E0C0E00087B6F2 /* ROIViewController.swift */,
 				622213D220EB2B150099EE71 /* TransformViewController.swift */,
+				62DF3AC9211AD5720001587A /* BlurViewController.swift */,
 				623D063120CFB8FF008FE5B7 /* Main.storyboard */,
 				623D063420CFB900008FE5B7 /* Assets.xcassets */,
 				623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 				623D062D20CFB8FF008FE5B7 /* AppDelegate.m in Sources */,
 				62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */,
 				629FCC4B20E0C0E00087B6F2 /* ROIViewController.swift in Sources */,
+				62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

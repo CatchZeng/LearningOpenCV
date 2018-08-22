@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aP6-LU-QC6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zFc-0W-eby">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -317,11 +317,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgD-gN-9Hd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6588" y="-116"/>
+            <point key="canvasLocation" x="-6263" y="-106"/>
+        </scene>
+        <!--Nolinear Blur View Controller-->
+        <scene sceneID="BWr-Gk-T0B">
+            <objects>
+                <viewController id="zFc-0W-eby" customClass="NolinearBlurViewController" customModule="LearningOpenCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="izw-H2-Awo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="ddkai" translatesAutoresizingMaskIntoConstraints="NO" id="9FN-ir-Som">
+                                <rect key="frame" x="53.5" y="71.5" width="268" height="407"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9FN-ir-Som" secondAttribute="height" multiplier="268:407" id="oPo-qY-uHY"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="Lt9-0N-tni">
+                                <rect key="frame" x="78" y="496.5" width="279" height="31"/>
+                                <connections>
+                                    <action selector="onSliderValueChanged:" destination="zFc-0W-eby" eventType="valueChanged" id="q5h-A0-PeG"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:   1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-aM-tGt">
+                                <rect key="frame" x="16" y="501.5" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CO-hn-Lo8">
+                                <rect key="frame" x="364" y="501.5" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0bV-aM-tGt" firstAttribute="top" secondItem="9FN-ir-Som" secondAttribute="bottom" constant="23" id="C8y-Fl-DBV"/>
+                            <constraint firstItem="0CO-hn-Lo8" firstAttribute="trailing" secondItem="HyQ-af-y6N" secondAttribute="trailing" id="GZw-lI-WNG"/>
+                            <constraint firstItem="0bV-aM-tGt" firstAttribute="leading" secondItem="HyQ-af-y6N" secondAttribute="leading" constant="16" id="RUM-nR-iLL"/>
+                            <constraint firstItem="HyQ-af-y6N" firstAttribute="trailing" secondItem="Lt9-0N-tni" secondAttribute="trailing" constant="20" id="S8F-nR-YbF"/>
+                            <constraint firstItem="Lt9-0N-tni" firstAttribute="leading" secondItem="HyQ-af-y6N" secondAttribute="leading" constant="80" id="TNT-d2-p6H"/>
+                            <constraint firstItem="9FN-ir-Som" firstAttribute="centerY" secondItem="HyQ-af-y6N" secondAttribute="centerY" multiplier="0.8" id="ZIt-Rc-L6w"/>
+                            <constraint firstItem="0CO-hn-Lo8" firstAttribute="centerY" secondItem="Lt9-0N-tni" secondAttribute="centerY" id="evj-Ss-8iD"/>
+                            <constraint firstItem="9FN-ir-Som" firstAttribute="centerX" secondItem="HyQ-af-y6N" secondAttribute="centerX" id="jvT-8e-Dqc"/>
+                            <constraint firstItem="Lt9-0N-tni" firstAttribute="top" secondItem="9FN-ir-Som" secondAttribute="bottom" constant="18" id="wkJ-mr-R7Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HyQ-af-y6N"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="9FN-ir-Som" id="df7-3x-4pN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79V-uJ-Wdn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7796" y="-101"/>
         </scene>
     </scenes>
     <resources>
         <image name="ake" width="100" height="100"/>
+        <image name="ddkai" width="268" height="407"/>
         <image name="houyi" width="100" height="100"/>
         <image name="sayHello" width="550" height="309"/>
     </resources>

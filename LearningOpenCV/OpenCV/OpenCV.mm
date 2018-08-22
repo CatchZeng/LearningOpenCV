@@ -186,4 +186,20 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)medianBlur:(UIImage *)image size:(int)size {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    int finalSize = size;
+    if (size%2 == 0) {
+        finalSize = size + 1;
+    }
+    Mat dst;
+    medianBlur(src, dst, finalSize);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
 @end

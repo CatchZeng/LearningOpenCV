@@ -37,4 +37,6 @@
 
 + (UIImage *)gaussianblur:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
 
++ (UIImage *)medianBlur:(UIImage *)image size:(int)size;
+
 @end

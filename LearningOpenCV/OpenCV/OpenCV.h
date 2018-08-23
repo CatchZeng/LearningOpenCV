@@ -39,4 +39,9 @@
 
 + (UIImage *)medianBlur:(UIImage *)image size:(int)size;
 
++ (UIImage *)bilateralFilter:(UIImage *)image
+                           d:(int)d
+                  sigmaColor:(double)sigmaColor
+                  sigmaSpace:(double)sigmaSpace;
+
 @end

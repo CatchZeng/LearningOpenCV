@@ -202,4 +202,23 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)bilateralFilter:(UIImage *)image
+                           d:(int)d
+                  sigmaColor:(double)sigmaColor
+                  sigmaSpace:(double)sigmaSpace {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    if (src.channels() == 4) {
+        cvtColor(src, src, CV_BGRA2BGR);
+    }
+    
+    Mat dst;
+    bilateralFilter(src, dst, d, sigmaColor, sigmaSpace);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
 @end

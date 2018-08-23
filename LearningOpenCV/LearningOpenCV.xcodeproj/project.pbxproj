@@ -23,6 +23,7 @@
 		62C1ABC820D0AC10006A8AD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C1ABC720D0AC10006A8AD0 /* Foundation.framework */; };
 		62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C1ABD020D0B29C006A8AD0 /* SayHelloViewController.swift */; };
 		62D05DE2212CF2E300AB408F /* NolinearBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */; };
+		62D58988212D4CDC0003B5E5 /* BilateralFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */; };
 		62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF3AC9211AD5720001587A /* BlurViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		62C1ABCF20D0B29C006A8AD0 /* LearningOpenCV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningOpenCV-Bridging-Header.h"; sourceTree = "<group>"; };
 		62C1ABD020D0B29C006A8AD0 /* SayHelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayHelloViewController.swift; sourceTree = "<group>"; };
 		62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NolinearBlurViewController.swift; sourceTree = "<group>"; };
+		62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilateralFilterViewController.swift; sourceTree = "<group>"; };
 		62DF3AC9211AD5720001587A /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				622213D220EB2B150099EE71 /* TransformViewController.swift */,
 				62DF3AC9211AD5720001587A /* BlurViewController.swift */,
 				62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */,
+				62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */,
 				623D063120CFB8FF008FE5B7 /* Main.storyboard */,
 				623D063420CFB900008FE5B7 /* Assets.xcassets */,
 				623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 				62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */,
 				629FCC4B20E0C0E00087B6F2 /* ROIViewController.swift in Sources */,
 				62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */,
+				62D58988212D4CDC0003B5E5 /* BilateralFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 		623D063820CFB900008FE5B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */; };
 		623D063B20CFB900008FE5B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D063A20CFB900008FE5B7 /* main.m */; };
 		623D064520CFB901008FE5B7 /* LearningOpenCVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D064420CFB900008FE5B7 /* LearningOpenCVTests.m */; };
+		62496B59215E194600F919E9 /* DilateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62496B57215E194600F919E9 /* DilateViewController.swift */; };
 		6266752020DA48FE00ADE014 /* MixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266751F20DA48FE00ADE014 /* MixViewController.swift */; };
 		629FCC4B20E0C0E00087B6F2 /* ROIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629FCC4A20E0C0E00087B6F2 /* ROIViewController.swift */; };
 		62AF7B5420CFD0F000DD8909 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AF7B5320CFD0F000DD8909 /* opencv2.framework */; };
@@ -50,6 +51,7 @@
 		623D064020CFB900008FE5B7 /* LearningOpenCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningOpenCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		623D064420CFB900008FE5B7 /* LearningOpenCVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningOpenCVTests.m; sourceTree = "<group>"; };
 		623D064620CFB901008FE5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62496B57215E194600F919E9 /* DilateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilateViewController.swift; sourceTree = "<group>"; };
 		6266751F20DA48FE00ADE014 /* MixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixViewController.swift; sourceTree = "<group>"; };
 		629FCC4A20E0C0E00087B6F2 /* ROIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIViewController.swift; sourceTree = "<group>"; };
 		62AF7B5320CFD0F000DD8909 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				62DF3AC9211AD5720001587A /* BlurViewController.swift */,
 				62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */,
 				62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */,
+				62496B57215E194600F919E9 /* DilateViewController.swift */,
 				623D063120CFB8FF008FE5B7 /* Main.storyboard */,
 				623D063420CFB900008FE5B7 /* Assets.xcassets */,
 				623D063620CFB900008FE5B7 /* LaunchScreen.storyboard */,
@@ -212,7 +215,7 @@
 		623D062020CFB8FF008FE5B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = catch;
 				TargetAttributes = {
 					623D062720CFB8FF008FE5B7 = {
@@ -278,6 +281,7 @@
 				62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */,
 				629FCC4B20E0C0E00087B6F2 /* ROIViewController.swift in Sources */,
 				62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */,
+				62496B59215E194600F919E9 /* DilateViewController.swift in Sources */,
 				62D58988212D4CDC0003B5E5 /* BilateralFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +430,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

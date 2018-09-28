@@ -44,4 +44,6 @@
                   sigmaColor:(double)sigmaColor
                   sigmaSpace:(double)sigmaSpace;
 
++ (UIImage *)dilate:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
 @end

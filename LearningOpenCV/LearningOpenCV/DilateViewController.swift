@@ -31,13 +31,17 @@ class DilateViewController: UIViewController {
     }
     
     private func transform() {
-        if sizeX%2 == 0 {
-            sizeX = sizeX + 1
+        if sizeX == 0 && sizeY == 0 {
+            resultImageView.image = imageView.image
+        } else {
+            if sizeX%2 == 0 {
+                sizeX = sizeX + 1
+            }
+            if sizeY%2 == 0 {
+                sizeY = sizeY + 1
+            }
+            let image = OpenCV.dilate(imageView.image, sizeX: sizeX, sizeY: sizeY)
+            resultImageView.image = image
         }
-        if sizeY%2 == 0 {
-            sizeY = sizeY + 1
-        }
-        let image = OpenCV.dilate(imageView.image, sizeX: sizeX, sizeY: sizeY)
-        resultImageView.image = image
     }
 }

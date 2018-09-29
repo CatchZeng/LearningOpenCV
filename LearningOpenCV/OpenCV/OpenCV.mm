@@ -226,8 +226,21 @@ using namespace cv;
     UIImageToMat(image, src);
     
     Mat dst;
-    InputArray kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
     dilate(src, dst, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)erode:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    erode(src, dst, kernel);
     
     UIImage* result = MatToUIImage(dst);
     

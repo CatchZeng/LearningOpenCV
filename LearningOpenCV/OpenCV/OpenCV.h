@@ -46,4 +46,6 @@
 
 + (UIImage *)dilate:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
 
++ (UIImage *)erode:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
 @end

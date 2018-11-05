@@ -27,6 +27,11 @@
 		62D05DE2212CF2E300AB408F /* NolinearBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */; };
 		62D58988212D4CDC0003B5E5 /* BilateralFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */; };
 		62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF3AC9211AD5720001587A /* BlurViewController.swift */; };
+		62E969FA218FDE9100E835A7 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E969F9218FDE9100E835A7 /* OpenViewController.swift */; };
+		62E969FC218FEA3D00E835A7 /* CloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E969FB218FEA3D00E835A7 /* CloseViewController.swift */; };
+		62FED85321901833009DD716 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FED85221901833009DD716 /* GradientViewController.swift */; };
+		62FED8552190200D009DD716 /* TopHatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FED8542190200D009DD716 /* TopHatViewController.swift */; };
+		62FED85721902442009DD716 /* BlackHatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FED85621902442009DD716 /* BlackHatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,11 @@
 		62D05DE1212CF2E300AB408F /* NolinearBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NolinearBlurViewController.swift; sourceTree = "<group>"; };
 		62D58987212D4CDC0003B5E5 /* BilateralFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilateralFilterViewController.swift; sourceTree = "<group>"; };
 		62DF3AC9211AD5720001587A /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
+		62E969F9218FDE9100E835A7 /* OpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenViewController.swift; sourceTree = "<group>"; };
+		62E969FB218FEA3D00E835A7 /* CloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseViewController.swift; sourceTree = "<group>"; };
+		62FED85221901833009DD716 /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		62FED8542190200D009DD716 /* TopHatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHatViewController.swift; sourceTree = "<group>"; };
+		62FED85621902442009DD716 /* BlackHatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,11 @@
 				623D063920CFB900008FE5B7 /* Info.plist */,
 				623D063A20CFB900008FE5B7 /* main.m */,
 				62C1ABCF20D0B29C006A8AD0 /* LearningOpenCV-Bridging-Header.h */,
+				62E969F9218FDE9100E835A7 /* OpenViewController.swift */,
+				62E969FB218FEA3D00E835A7 /* CloseViewController.swift */,
+				62FED85221901833009DD716 /* GradientViewController.swift */,
+				62FED8542190200D009DD716 /* TopHatViewController.swift */,
+				62FED85621902442009DD716 /* BlackHatViewController.swift */,
 			);
 			path = LearningOpenCV;
 			sourceTree = "<group>";
@@ -277,11 +292,16 @@
 			files = (
 				622213D320EB2B150099EE71 /* TransformViewController.swift in Sources */,
 				6266752020DA48FE00ADE014 /* MixViewController.swift in Sources */,
+				62FED85321901833009DD716 /* GradientViewController.swift in Sources */,
+				62E969FA218FDE9100E835A7 /* OpenViewController.swift in Sources */,
+				62FED8552190200D009DD716 /* TopHatViewController.swift in Sources */,
 				623D063B20CFB900008FE5B7 /* main.m in Sources */,
 				62D05DE2212CF2E300AB408F /* NolinearBlurViewController.swift in Sources */,
 				62AF7B5720CFD52C00DD8909 /* OpenCV.mm in Sources */,
 				623D062D20CFB8FF008FE5B7 /* AppDelegate.m in Sources */,
+				62E969FC218FEA3D00E835A7 /* CloseViewController.swift in Sources */,
 				62C1ABD220D0B29C006A8AD0 /* SayHelloViewController.swift in Sources */,
+				62FED85721902442009DD716 /* BlackHatViewController.swift in Sources */,
 				629FCC4B20E0C0E00087B6F2 /* ROIViewController.swift in Sources */,
 				62DF3ACA211AD5720001587A /* BlurViewController.swift in Sources */,
 				62496B59215E194600F919E9 /* DilateViewController.swift in Sources */,

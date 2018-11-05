@@ -247,4 +247,69 @@ using namespace cv;
     return result;
 }
 
++ (UIImage *)open:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    morphologyEx(src, dst, MORPH_OPEN, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)close:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    morphologyEx(src, dst, MORPH_CLOSE, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)gradient:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    morphologyEx(src, dst, MORPH_GRADIENT, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)topHat:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    morphologyEx(src, dst, MORPH_TOPHAT, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
++ (UIImage *)blackHat:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY {
+    Mat src;
+    UIImageToMat(image, src);
+    
+    Mat dst;
+    Mat kernel = getStructuringElement(MORPH_RECT, cv::Size(sizeX, sizeY));
+    morphologyEx(src, dst, MORPH_BLACKHAT, kernel);
+    
+    UIImage* result = MatToUIImage(dst);
+    
+    return result;
+}
+
 @end

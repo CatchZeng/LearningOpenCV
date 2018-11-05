@@ -48,4 +48,14 @@
 
 + (UIImage *)erode:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
 
++ (UIImage *)open:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
++ (UIImage *)close:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
++ (UIImage *)gradient:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
++ (UIImage *)topHat:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
++ (UIImage *)blackHat:(UIImage *)image sizeX:(int)sizeX sizeY:(int)sizeY;
+
 @end

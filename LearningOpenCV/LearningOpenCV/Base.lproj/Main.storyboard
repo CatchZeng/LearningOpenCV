@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVa-0h-CNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7s-Wg-fmr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1183,12 +1183,54 @@
             </objects>
             <point key="canvasLocation" x="-3737" y="574"/>
         </scene>
+        <!--Line View Controller-->
+        <scene sceneID="PHC-Dz-326">
+            <objects>
+                <viewController id="c7s-Wg-fmr" customClass="LineViewController" customModule="LearningOpenCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6cx-hB-2pp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Yuo-eO-pwK">
+                                <rect key="frame" x="0.0" y="32" width="375" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yuo-eO-pwK" secondAttribute="height" multiplier="550:309" id="hZe-QC-g9d"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="zyS-P5-yg0">
+                                <rect key="frame" x="0.0" y="272.5" width="375" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zyS-P5-yg0" secondAttribute="height" multiplier="550:309" id="bdF-Is-q3a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yuo-eO-pwK" firstAttribute="width" secondItem="6cx-hB-2pp" secondAttribute="width" id="1ri-qX-aVF"/>
+                            <constraint firstItem="zyS-P5-yg0" firstAttribute="width" secondItem="Yuo-eO-pwK" secondAttribute="width" id="2Ay-Sa-uNe"/>
+                            <constraint firstItem="Yuo-eO-pwK" firstAttribute="centerY" secondItem="TPG-Yf-a2y" secondAttribute="centerY" multiplier="0.4" id="9i1-YT-Bcv"/>
+                            <constraint firstItem="zyS-P5-yg0" firstAttribute="centerY" secondItem="TPG-Yf-a2y" secondAttribute="centerY" multiplier="1.1" id="DB5-do-7q8"/>
+                            <constraint firstItem="zyS-P5-yg0" firstAttribute="centerX" secondItem="Yuo-eO-pwK" secondAttribute="centerX" id="kx6-Gp-HrA"/>
+                            <constraint firstItem="Yuo-eO-pwK" firstAttribute="centerX" secondItem="TPG-Yf-a2y" secondAttribute="centerX" id="n10-XK-dCR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TPG-Yf-a2y"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Yuo-eO-pwK" id="fmw-sd-99p"/>
+                        <outlet property="resultImageView" destination="zyS-P5-yg0" id="kvf-M7-h9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjL-r4-ZkS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3010" y="573"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ake" width="100" height="100"/>
         <image name="close" width="667" height="320"/>
         <image name="ddkai" width="268" height="407"/>
         <image name="houyi" width="100" height="100"/>
+        <image name="line" width="1718" height="1039"/>
         <image name="open" width="667" height="320"/>
         <image name="sayHello" width="550" height="309"/>
         <image name="timg" width="900" height="662"/>

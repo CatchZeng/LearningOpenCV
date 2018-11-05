@@ -21,6 +21,18 @@ using namespace cv;
 
 @implementation OpenCV
 
++ (int)cols:(UIImage *)image {
+    Mat mat;
+    UIImageToMat(image, mat);
+    return mat.cols;
+}
+
++ (int)rows:(UIImage *)image {
+    Mat mat;
+    UIImageToMat(image, mat);
+    return mat.rows;
+}
+
 + (UIImage *)gray:(UIImage *)image {
     Mat mat;
     UIImageToMat(image, mat);
@@ -29,6 +41,25 @@ using namespace cv;
     cvtColor(mat, grayMat, CV_BGR2GRAY);
     
     UIImage* result = MatToUIImage(grayMat);
+    return result;
+}
+
++ (UIImage *)threshold:(UIImage *)image thresh:(double)thresh {
+    Mat mat;
+    UIImageToMat(image, mat);
+    
+    Mat dst;
+    threshold(mat, dst, thresh, 255, THRESH_BINARY);
+    
+    UIImage* result = MatToUIImage(dst);
+    return result;
+}
+
++ (UIImage *)negation:(UIImage *)image {
+    Mat mat;
+    UIImageToMat(image, mat);
+    
+    UIImage* result = MatToUIImage(~mat);
     return result;
 }
 

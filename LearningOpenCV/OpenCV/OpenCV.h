@@ -11,7 +11,15 @@
 
 @interface OpenCV : NSObject
 
++ (int)cols:(UIImage *)image;
+
++ (int)rows:(UIImage *)image;
+
 + (UIImage *)gray:(UIImage *)image;
+
++ (UIImage *)threshold:(UIImage *)image thresh:(double)thresh;
+
++ (UIImage *)negation:(UIImage *)image;
 
 + (UIImage *)mask:(UIImage *)image;
 
